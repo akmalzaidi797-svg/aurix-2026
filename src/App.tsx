@@ -1,16 +1,14 @@
 import FlowArt, { FlowSection } from './story-scroll';
 
-// Correctly re-mapped image variables for the 4 swapped events:
-import expoImg from './images/race.jpeg';        // Blue robot photo goes to Robotics Race
-import raceImg from './images/soccer.jpeg';      // Running robots photo goes to Robot Soccer
-import soccerImg from './images/ideathon.jpeg';  // Football match photo goes to Ideathon
-import ideathonImg from './images/expo.jpeg';    // Typing robot photo goes to Tech Exhibition
-
-// Keeping Hackathon and Innovation Showcase as they were:
-import hackathonImg from './images/hackathon.jpeg';
+// Importing all 6 images correctly from your images folder:
+import expoImg from './images/expo.jpeg';
 import extraImg from './images/extra.jpeg';
+import hackathonImg from './images/hackathon.jpeg';
+import ideathonImg from './images/ideathon.jpeg';
+import raceImg from './images/race.jpeg';
+import soccerImg from './images/soccer.jpeg';
 
-export function App() {
+export default function App() {
   return (
     <FlowArt aria-label="AURIX 2026 Story Scroll">
 
@@ -29,15 +27,15 @@ export function App() {
         </div>
 
         <div className="space-y-4 my-auto">
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-none text-blue-950">
-            AURIX <span className="text-blue-600">2026</span>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-none text-blue-600">
+            AURIX <span className="text-sky-500">2026</span>
           </h1>
-          <p className="text-xl md:text-2xl font-medium text-slate-700 max-w-2xl">
+          <p className="text-xl md:text-2xl font-medium text-sky-700 max-w-2xl">
             Advanced Unified Robotics &amp; Innovation Xperience. Welcome to the ultimate tech fest.
           </p>
         </div>
 
-        <div className="flex items-center gap-4 text-sm font-semibold text-blue-900">
+        <div className="flex items-center gap-4 text-sm font-semibold text-blue-600">
           <span className="flex items-center gap-2">📍 Greater Noida</span>
           <span>&bull;</span>
           <span className="flex items-center gap-2">🚀 Oct 28-29, 2026</span>
@@ -51,16 +49,16 @@ export function App() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center h-full">
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-blue-100 text-blue-600 px-3 py-1 rounded-full">
               High Speed Arena
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Robotics Race</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Robotics Race</h2>
+            <p className="text-sky-700 text-lg">
               Design, build, and race custom autonomous bots through complex obstacle tracks to claim ultimate speed dominance.
             </p>
           </div>
           <div className="h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-            <img src={expoImg} alt="Robotics Race" className="w-full h-full object-cover" />
+            <img src={raceImg} alt="Robotics Race" className="w-full h-full object-cover" />
           </div>
         </div>
       </FlowSection>
@@ -72,14 +70,14 @@ export function App() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center h-full">
           <div className="order-2 md:order-1 h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-            <img src={raceImg} alt="Robot Soccer" className="w-full h-full object-cover" />
+            <img src={soccerImg} alt="Robot Soccer" className="w-full h-full object-cover" />
           </div>
           <div className="order-1 md:order-2 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full">
               Robotic Sports
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Robot Soccer</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Robot Soccer</h2>
+            <p className="text-sky-700 text-lg">
               Strategy meets mechanical engineering in this high-octane robotic football match where bots battle for goals.
             </p>
           </div>
@@ -93,16 +91,16 @@ export function App() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center h-full">
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-amber-100 text-amber-800 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-amber-100 text-amber-700 px-3 py-1 rounded-full">
               Brainstorm &amp; Pitch
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Ideathon</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Ideathon</h2>
+            <p className="text-sky-700 text-lg">
               Pitch breakthrough ideas that solve real-world problems using automation, artificial intelligence, and smart tech.
             </p>
           </div>
           <div className="h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-            <img src={soccerImg} alt="Ideathon" className="w-full h-full object-cover" />
+            <img src={ideathonImg} alt="Ideathon" className="w-full h-full object-cover" />
           </div>
         </div>
       </FlowSection>
@@ -114,14 +112,14 @@ export function App() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center h-full">
           <div className="order-2 md:order-1 h-64 md:h-96 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
-            <img src={ideathonImg} alt="Tech Exhibition" className="w-full h-full object-cover" />
+            <img src={expoImg} alt="Tech Exhibition" className="w-full h-full object-cover" />
           </div>
           <div className="order-1 md:order-2 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-purple-100 text-purple-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-purple-100 text-purple-600 px-3 py-1 rounded-full">
               Innovation Showcase
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Tech Exhibition</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Tech Exhibition</h2>
+            <p className="text-sky-700 text-lg">
               Witness cutting-edge prototypes, futuristic gadgets, and visionary technological marvels built by brilliant minds.
             </p>
           </div>
@@ -135,11 +133,11 @@ export function App() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center h-full">
           <div className="space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-rose-100 text-rose-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-rose-100 text-rose-600 px-3 py-1 rounded-full">
               24-Hour Code Sprint
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Hackathon</h2>
-            <p className="text-slate-600 text-lg">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Hackathon</h2>
+            <p className="text-sky-700 text-lg">
               Code through the clock, collaborate with elite developers, and build working software solutions under intense deadlines.
             </p>
           </div>
@@ -159,11 +157,11 @@ export function App() {
             <img src={extraImg} alt="Innovation Perks" className="w-full h-full object-cover" />
           </div>
           <div className="order-1 md:order-2 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">
+            <span className="text-xs font-bold uppercase tracking-widest bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
               Why Attend?
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-950">Unlock Your Potential</h2>
-            <ul className="space-y-2 text-slate-700 font-medium">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-blue-600">Unlock Your Potential</h2>
+            <ul className="space-y-2 text-sky-700 font-medium">
               <li className="flex items-center gap-3">✅ Win exciting cash prizes &amp; goodies</li>
               <li className="flex items-center gap-3">✅ Network with industry experts &amp; mentors</li>
               <li className="flex items-center gap-3">✅ Build leadership &amp; teamwork experience</li>
@@ -173,7 +171,7 @@ export function App() {
         </div>
       </FlowSection>
 
-      {/* Section 8: Registration Opening Soon (New Section Added) */}
+      {/* Section 8: Registration Opening Soon */}
       <FlowSection
         aria-label="Registration Opening Soon"
         style={{ backgroundColor: '#FFFFFF', color: '#0A2540' }}
@@ -197,14 +195,14 @@ export function App() {
         style={{ backgroundColor: '#F0F6FF', color: '#0A2540' }}
       >
         <div className="space-y-6 my-auto max-w-xl">
-          <h3 className="text-2xl font-extrabold text-blue-900">Event Details</h3>
-          <p className="text-slate-600">Join us at IILM University, Greater Noida for two days of relentless technology and innovation.</p>
-          <div className="pt-4 border-t border-blue-200 flex flex-col gap-2 font-semibold">
+          <h3 className="text-2xl font-extrabold text-blue-600">Event Details</h3>
+          <p className="text-sky-700">Join us at IILM University, Greater Noida for two days of relentless technology and innovation.</p>
+          <div className="pt-4 border-t border-blue-200 flex flex-col gap-2 font-semibold text-sky-800">
             <span>📅 Dates: 28th &amp; 29th October 2026</span>
             <span>📍 Venue: IILM University, Greater Noida</span>
           </div>
         </div>
-        <hr className="my-[2vw] border-none border-t border-slate-200" />
+        <hr className="my-[2vw] border-none border-t border-blue-200" />
         <div className="text-center pb-4">
           <p className="text-sm font-bold tracking-widest uppercase text-blue-600">
             Kalam Robotics Society &bull; IILM University, Greater Noida
@@ -215,5 +213,3 @@ export function App() {
     </FlowArt>
   );
 }
-
-export default App;
