@@ -139,6 +139,17 @@ export function App() {
           </p>
         </div>
       </FlowSection>
+      <FlowSection>
+  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-8 rounded-3xl text-center shadow-xl flex flex-col items-center justify-center gap-4 my-6">
+    <h2 className="text-3xl font-extrabold tracking-tight">🚀 Registration Opening Soon!</h2>
+    <p className="text-blue-100 text-lg max-w-xl">
+      Get ready to showcase your robotics and innovation skills at AURIX 2026. Stay tuned for updates!
+    </p>
+    <span className="inline-block bg-white text-blue-700 font-bold px-6 py-2 rounded-full shadow-md text-sm mt-2">
+      Coming Soon
+    </span>
+  </div>
+</FlowSection>
 
     </FlowArt>
   );
