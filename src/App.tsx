@@ -10,7 +10,7 @@ import ideathonImg from './images/expo.jpeg';     // Typing robot photo goes to 
 import hackathonImg from './images/hackathon.jpeg'; 
 import extraImg from './images/extra.jpeg';       
 
-export default App;
+
 
 export function App() {
   return (
@@ -154,3 +154,4 @@ export function App() {
     </FlowArt>
   );
 }
+export default App;
